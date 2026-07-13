@@ -1,0 +1,119 @@
+.contact {
+  padding: var(--space-24) var(--space-8);
+  background: var(--color-bg-primary);
+}
+
+.contact__container {
+  max-width: var(--landing-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.contact__gold-line {
+  width: 50px;
+  height: 2px;
+  background: var(--color-gold-primary);
+  margin-bottom: var(--space-6);
+}
+
+.contact__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.contact__subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-12);
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.contact__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.contact__item-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-gold-muted);
+  color: var(--color-gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__item-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.contact__item-label {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.contact__item-line {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.contact__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__map-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c1810 40%, #3e2723 70%, #1a0e00 100%);
+  border: var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__map-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 60% 40%, rgba(201, 169, 110, 0.1) 0%, transparent 50%);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: var(--space-16) var(--space-4);
+  }
+
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .contact__title {
+    font-size: var(--text-3xl);
+  }
+
+  .contact__map-placeholder {
+    max-width: 400px;
+  }
+}

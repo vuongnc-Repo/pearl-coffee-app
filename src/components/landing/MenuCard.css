@@ -1,0 +1,54 @@
+.menu-card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(201, 169, 110, 0.1);
+  transition: transform var(--transition-base), border-color var(--transition-base),
+    box-shadow var(--transition-base);
+  cursor: pointer;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--color-gold-primary);
+  box-shadow: var(--shadow-gold);
+}
+
+.menu-card__gradient {
+  position: relative;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu-card__icon {
+  color: rgba(255, 255, 255, 0.12);
+  position: absolute;
+}
+
+.menu-card__info {
+  padding: var(--space-6);
+}
+
+.menu-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.menu-card__description {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.menu-card__price {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  color: var(--color-gold-primary);
+  font-weight: 600;
+}
